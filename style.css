@@ -1,0 +1,43 @@
+.carousel-container {
+    position: relative;
+    width: 900px;
+    overflow: hidden;
+}
+  
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    background-color: #ccc;
+}
+
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+  
