@@ -1,3 +1,11 @@
+.header {
+    background-image: url('');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+
 .parent {
     width: 2335px;
     height: 60px;
