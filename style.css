@@ -1,12 +1,27 @@
+h1 {
+    color: rgb(49, 49, 49);
+    font-family: Merriweather;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 110%;
+}
+
 .header {
-    background-image: url('');
+    background-image: url('./img/main_back.jpeg');
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    height: 881px;
+
+    
+}
+
+.header__text_2 {
+    text-align: center;
 }
 
 
-.parent {
+.runingLine {
     width: 2335px;
     height: 60px;
     gap: 12px;
@@ -16,7 +31,7 @@
     background: #F54932;
 }
 
-.child {
+.line {
     font-family: Merriweather;
     font-size: 22px;
     font-weight: 400;
@@ -29,15 +44,15 @@
     animation: marquee 10s;
 }
 
-.child1 {   
+.line1 {   
     width: 544px;
 }
 
-.child2 {
+.line2 {
     width: 587px;
 }
 
-.child3 {
+.line3 {
     width: 440px;
 }
 
