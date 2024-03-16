@@ -48,7 +48,7 @@ p {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    height: 881px;
+    height: 700px;
     display: flex;
     flex-direction: column;
 }
@@ -363,11 +363,6 @@ p {
 
 
 @media (max-width: 1366px) {
-    .header {
-        background-image: url('./img/main_back1366.jpeg');
-        height: 700px;
-    }
-
     .header__button {
         height: 78px;        
     }
