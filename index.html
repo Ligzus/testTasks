@@ -59,36 +59,37 @@
         </div>
 
         <div class="header__button">
-            <button class="header__button_left">
+            <a href="#supportTourn" class="header__button_left">
                 Поддержать шахматную мысль
-            </button>
-            <button class="header__button_right">
+            </a>
+
+            <a href="#carouselContainer" class="header__button_right">
                 Подробнее о турнире
-            </button>
+            </a>            
         </div>
     </header>
 
     <Section>
-        <div class="runingLine">
-            <div class="line line1">
+        <marquee class="runingLine" behavior="scroll" direction="left">
+            <span class="line line1">
                 Дело помощи утопающим — дело рук самих утопающих!
-            </div>
-            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </span>
+            <svg class="svgLine" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="3" cy="3" r="3" fill="white" />
             </svg>
-            <div class="line line2">
+            <span class="line line2">
                 Шахматы двигают вперед не только культуру, но и экономику!
-            </div>
-            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </span>
+            <svg class="svgLine" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="3" cy="3" r="3" fill="white" />
-            </svg>
-            <div class="line line3">
+            </svg><span class="line line3">
                 Лед тронулся, господа присяжные заседатели!
-            </div>
-        </div>
+            </span>            
+        </marquee>
+        
 
-        <div class="center">
-            <div class="supportTourn">
+        <div>
+            <div id="supportTourn" class="center">
                 <h2 class="supportTourn_text">
                     Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:
                     <span class="redElement">«Плодотворная дебютная идея»</span>
@@ -160,7 +161,8 @@
             <div class="stages__span94">
                 <img src="./img/stage_span42.jpeg" alt="stage_3">
                 <span class="stages__span_num stages__span_num3">3</span>
-                <p>Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+                <p>Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры,
+                    шоколадных конфет</p>
             </div>
 
             <div class="stages__span14">
@@ -184,30 +186,105 @@
             <div class="stages__span58">
                 <img src="./img/stage_span8.jpeg" alt=stage_7">
                 <span class="stages__span_num">7</span>
-                <p>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</p>
+                <p>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей
+                    во все концы света, включая Лос-Анжелос и Мельбурн</p>
             </div>
 
             <img class="airplane" src="./img/airplane1.png" alt="">
         </div>
-
-
     </Section>
 
     <Section>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="slide">1</div>
-                <div class="slide">2</div>
-                <div class="slide">3</div>
-                <div class="slide">4</div>
-                <div class="slide">5</div>
-                <div class="slide">6</div>
+        <div class="center" id="carouselContainer">
+
+            <div class="carousel__title">
+                <h2 class="stages__title">
+                    Участники турнира
+                </h2>
+
+                <button id="prevBtn">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)" fill="#313131"/>
+                        <path d="M24.5382 30.4614L16.0767 21.9999L24.5382 13.5384" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                    </svg>                        
+                </button>
+
+                <button id="nextBtn">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="22" cy="22" r="22" fill="#313131"/>
+                        <path d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                    </svg>                        
+                </button>
+
+                <div class="counter"></div>
+
             </div>
-            <button id="prevBtn">Previous</button>
-            <button id="nextBtn">Next</button>
-            <div id="counter"></div>
+
+            <div class="carousel">
+                <div class="slide">
+                    <p class="name">Хозе-Рауль Капабланка</p>
+                    <p class="desc">Чемпион мира по шахматам</p>
+                    <button class="details">Подробнее</button>
+                </div>
+
+                <div class="slide">
+                    <p class="name">Эммануил Ласкер</p>
+                    <p class="desc">Чемпион мира по шахматам</p>
+                    <button class="details">Подробнее</button>
+                </div>
+
+                <div class="slide">
+                    <p class="name">Александр Алехин</p>
+                    <p class="desc">Чемпион мира по шахматам</p>
+                    <button class="details">Подробнее</button>
+                </div>
+
+                <div class="slide">
+                    <p class="name">Арон Нимцович</p>
+                    <p class="desc">Чемпион мира по шахматам</p>
+                    <button class="details">Подробнее</button>
+                </div>
+
+                <div class="slide">
+                    <p class="name">Рихард Рети</p>
+                    <p class="desc">Чемпион мира по шахматам</p>
+                    <button class="details">Подробнее</button>
+                </div>
+
+                <div class="slide">
+                    <p class="name">Остап Бендер</p>
+                    <p class="desc">Гроссмейстер</p>
+                    <button class="details">Подробнее</button>
+                </div>
+
+            </div>
         </div>
+
+        <marquee class="runingLine" behavior="scroll" direction="left">
+            <span class="line line1">
+                Дело помощи утопающим — дело рук самих утопающих!
+            </span>
+            <svg class="svgLine" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="3" cy="3" r="3" fill="white" />
+            </svg>
+            <span class="line line2">
+                Шахматы двигают вперед не только культуру, но и экономику!
+            </span>
+            <svg class="svgLine" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="3" cy="3" r="3" fill="white" />
+            </svg><span class="line line3">
+                Лед тронулся, господа присяжные заседатели!
+            </span>            
+        </marquee>
+
     </Section>
+
+    <footer class="center footer">
+        <p>
+            Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями
+            можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+        </p>
+    </footer>
 
 
     <script src="./main.js"></script>

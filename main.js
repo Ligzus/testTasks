@@ -6,7 +6,7 @@ const slideWidth = slides[0].offsetWidth * 3; // Ширина трех слай�
 const totalSlides = slides.length;
 let currentIndex = 0;
 
-const counter = document.getElementById('counter');
+const counter = document.querySelector('.counter');
 
 updateCounter();
 updateButtons();
@@ -43,7 +43,7 @@ function updateButtons() {
 };
 
 function updateCounter() {
-  const startSlide = currentIndex === 0 ? 1 : currentIndex + 3;
+  const startSlide = currentIndex === 0 ? 3 : currentIndex + 3;
   const endSlide = Math.min(currentIndex + 3, totalSlides);
   counter.textContent = `${startSlide}/${totalSlides}`;
 };
