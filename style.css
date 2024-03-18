@@ -117,7 +117,7 @@ p {
 .header__button_left,
 .header__button_right {    
     font-family: Golos Text;
-    min-width: 263px;    
+    width: 263px;    
     max-height: 72px;     
     text-align: center;
     border-radius: 66px;     
@@ -207,6 +207,19 @@ p {
     color: rgb(245, 73, 50);
 }
 
+.strike {
+    position: relative;
+}
+
+.strike::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 2px solid red;
+}
+
 .schedule {
     display: flex;
     margin-bottom: 165px;
@@ -229,6 +242,10 @@ p {
     margin-top: 61px;
 }
 
+.schedule__grid_mobile {
+    display: none;
+}
+
 .schedule__item,
 .schedule__item_values {
     grid-column: span 3;
@@ -241,7 +258,7 @@ p {
     text-align: left;
 }
 
-.schedule__item_values {    
+.schedule__item_modValues {    
     font-weight: 600;
 }
 
@@ -271,6 +288,7 @@ p {
 }
 
 .stages {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -295,6 +313,10 @@ p {
     color: #3057A2;
     grid-column: 4 / span 3;
     margin-top: -58px;
+}
+
+.stages__spanMobile {
+    display: none;
 }
 
 .stages__span {
@@ -369,8 +391,9 @@ p {
 
 .airplane {    
     position: absolute;
+    z-index: 1;
     right: calc(50% - 660px);    
-    top: 45%;
+    top: 280%;
 }
 
 #carouselContainer {
@@ -574,6 +597,7 @@ svg circle {
     .header__button_left,
     .header__button_right {
         line-height: 11px;
+        width: 100%;
         height: 47px;
         padding-left: 20px;
         padding-right: 20px;
@@ -614,6 +638,7 @@ svg circle {
 
     .schedule {
         flex-wrap: wrap;
+        margin-bottom: 120px;
     }
 
     .schedule__img {
@@ -621,13 +646,75 @@ svg circle {
         height: 420px;
     }
 
-    .stages {
+    .schedule__grid {
         display: none;
+    }
+    
+    .schedule__grid_mobile {
+        display: block;
+    }
+    
+    .schedule__item::after {
+        display: none;
+    }
+
+    .schedule__item {
+        margin-top: 28px;
+    }
+
+    .schedule__item p:not(:last-child),
+    .schedule__item_values p:not(:last-child) {
+        border-bottom: none; 
+    }
+
+    .schedule__grid_mobile .schedule__item .schedule__item_modValues {
+        border-bottom: 1px solid #D0D0D0; 
+    } 
+    
+    .schedule__item_mod {
+        padding-bottom: 12px;
+    }
+
+    .schedule__item_modValues {
+        padding-top: 0;
+    }
+
+    .stages {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .stages__span {
+        display: none;
+    }
+
+    .stages__title_span {
+        margin-top: 12px;
+        margin-bottom: 148px;
+    }
+        
+    .stages__span {
+        margin-top: 0;
+        margin-bottom: 120px;
+        height: 364px;
+    }
+
+    .airplane {
+        transform: rotate(-4deg);
+        width: 90%;
+        right: calc(0%);
+        top: 55%;
     }
 
     .stages__title {
         font-size: 36px;
     }  
+
+    .stages__spanMobile {
+        display: block;
+        height: 364px;
+        margin-bottom: 120px;
+    }
 
     #carouselContainer {
         margin: 0;

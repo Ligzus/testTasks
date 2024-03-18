@@ -2,7 +2,7 @@ const carousel = document.querySelector('.carousel');
 const prevButton = document.getElementById('prevBtn');
 const nextButton = document.getElementById('nextBtn');
 const slides = document.querySelectorAll('.slide');
-const slideWidth = slides[0].offsetWidth * 3; // Ширина трех слайдов
+const slideWidth = slides[0].offsetWidth * 3;
 const totalSlides = slides.length;
 let currentIndex = 0;
 
