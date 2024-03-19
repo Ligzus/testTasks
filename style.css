@@ -445,7 +445,7 @@ svg circle {
 }
 
 #prevBtnStage:hover svg circle,
-#prevBtnStage:hover svg circle,
+#nextBtnStage:hover svg circle,
 #prevBtn:hover svg circle,
 #nextBtn:hover svg circle {
     fill: #FBCE51;
@@ -555,7 +555,9 @@ svg circle {
     }
 }
 
+
 @media (max-width: 375px) {
+
     .center {
         padding-left: calc(50% - 168px);
         padding-right: calc(50% - 168px);
@@ -722,11 +724,24 @@ svg circle {
     }
 
     .stages__mobile {
+        display: flex;
+        flex-direction: column;
         width: 335px;
         height: 300px;
         opacity: 0;
         position: absolute;
         transition: opacity 1s ease;
+        padding-left: 72px;
+        padding-right: 20px;
+        padding-top: 62px;
+        box-sizing: border-box;
+        gap: 28px;
+    }
+
+    .stages__mobile p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 120%;
     }
 
     .stages__mobile.active {
@@ -734,49 +749,56 @@ svg circle {
     }
 
     .carousel-navigation {
-        position: relative;
-        left: 0;
+        padding-left: 75px;   
+        padding-right: 105px;  
+        box-sizing: border-box;   
+        position: absolute;
+        bottom: 0;
         width: 100%;
-        height: 30px;
-        text-align: center;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
     }
       
     .carousel-navigation button {
         color: #000;
         border: none;
-        padding: 10px 20px;
-        margin: 0 5px;
         cursor: pointer;
         outline: none;
         background: none;
     }
-      
+
+   
     .carousel-navigation button:disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }
 
-    #slideCounter {   
-        
+    #slideCounter {
+        position: absolute;
+        padding-bottom: 30px;
+        left: 20%;
+        transform: translateY(-35%);
     }
+    
 
     .stages__mobile12 {
         background-image: url(./img/mobile/mobileStage_1_2.jpeg);
     }
 
-    .stages__mobile2 {
+    .stages__mobile3 {
         background-image: url(./img/mobile/mobileStage_3.jpeg);
     }
 
-    .stages__mobile3 {
+    .stages__mobile45 {
         background-image: url(./img/mobile/mobileStage_4_5.jpeg);
     }
 
-    .stages__mobile45 {
+    .stages__mobile6 {
         background-image: url(./img/mobile/mobileStage_6.jpeg);
     }
 
-    .stages__mobile6 {
+    .stages__mobile7 {
         background-image: url(./img/mobile/mobileStage_7.jpeg);
     }
 
@@ -796,26 +818,30 @@ svg circle {
         height: 388px;
     }
     
+    
     #prevBtn,
     #nextBtn {
         top: 632%
     }
 
-    
+    #prevBtnStage svg,
+    #nextBtnStage svg,
     #prevBtn svg,
     #nextBtn svg {
         width: 36px;
         height: 39px;
     }
 
+    #prevBtnStage,
     #prevBtn {
         right: calc(50% + 8%);        
     }
     
+    #nextBtnStage,
     #nextBtn {
         right: calc(50% - 18%);
     }
-
+    
     .counter {
         top: 645%;
         left: calc(50% - 4%);
