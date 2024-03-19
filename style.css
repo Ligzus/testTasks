@@ -444,6 +444,8 @@ svg circle {
     transition: 0.5s;
 }
 
+#prevBtnStage:hover svg circle,
+#prevBtnStage:hover svg circle,
 #prevBtn:hover svg circle,
 #nextBtn:hover svg circle {
     fill: #FBCE51;
@@ -458,6 +460,7 @@ svg circle {
     right: 0;
 }
 
+#slideCounter,
 .counter {    
     position: absolute;
     color: rgb(49, 49, 49);
@@ -711,9 +714,70 @@ svg circle {
     }  
 
     .stages__spanMobile {
-        display: block;
+        position: relative;
+        display: flex;
         height: 364px;
         margin-bottom: 120px;
+        overflow: hidden;
+    }
+
+    .stages__mobile {
+        width: 335px;
+        height: 300px;
+        opacity: 0;
+        position: absolute;
+        transition: opacity 1s ease;
+    }
+
+    .stages__mobile.active {
+        opacity: 1;
+    }
+
+    .carousel-navigation {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+    }
+      
+    .carousel-navigation button {
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        cursor: pointer;
+        outline: none;
+        background: none;
+    }
+      
+    .carousel-navigation button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    #slideCounter {   
+        
+    }
+
+    .stages__mobile12 {
+        background-image: url(./img/mobile/mobileStage_1_2.jpeg);
+    }
+
+    .stages__mobile2 {
+        background-image: url(./img/mobile/mobileStage_3.jpeg);
+    }
+
+    .stages__mobile3 {
+        background-image: url(./img/mobile/mobileStage_4_5.jpeg);
+    }
+
+    .stages__mobile45 {
+        background-image: url(./img/mobile/mobileStage_6.jpeg);
+    }
+
+    .stages__mobile6 {
+        background-image: url(./img/mobile/mobileStage_7.jpeg);
     }
 
     #carouselContainer {
