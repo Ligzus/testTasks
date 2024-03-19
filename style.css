@@ -770,7 +770,7 @@ svg circle {
 
    
     .carousel-navigation button:disabled {
-        opacity: 0.5;
+        opacity: 20%;
         cursor: not-allowed;
     }
 
