@@ -406,11 +406,16 @@ p {
 .carousel__title {
     position: relative;
 }
+
+.wrapper-carousel {
+    overflow: hidden;
+}
   
 .carousel {
     display: flex;   
     transition: transform 0.5s ease;
     margin-top: 60px;
+    padding-left: 10px;
 }
 
 .slide {
@@ -843,6 +848,7 @@ svg circle {
     }
     
     .counter {
+        width: 28px;
         top: 645%;
         left: calc(50% - 4%);
     }
