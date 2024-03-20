@@ -773,18 +773,30 @@ svg circle {
         background: none;
     }
 
+    .carousel-dots {
+        display: flex;
+        align-items: center;
+    }
+    
+    .carousel-dots .carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ccc; /* Цвет неактивной точки */
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    
+    .carousel-dots .carousel-dot.active {
+        background-color: #555; /* Цвет активной точки */
+    }
+    
+
    
     .carousel-navigation button:disabled {
         opacity: 20%;
         cursor: not-allowed;
-    }
-
-    #slideCounter {
-        position: absolute;
-        padding-bottom: 30px;
-        left: 20%;
-        transform: translateY(-35%);
-    }
+    }  
     
 
     .stages__mobile12 {

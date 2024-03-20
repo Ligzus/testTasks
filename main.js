@@ -85,5 +85,39 @@ showOurSlide(ourCurrentSlide); // Показываем начальный сла
 document.getElementById('prevBtnStage').addEventListener('click', prevOurSlide); // Добавляем обработчик события для кнопки "предыдущий"
 document.getElementById('nextBtnStage').addEventListener('click', nextOurSlide); // Добавляем обработчик события для кнопки "следующий"
 
-// МОБИЛЬНАЯ КАРУСЕЛЬ2:
+const carouselDotsContainer = document.querySelector('.carousel-dots');
 
+// Создаем точки для каждого слайда
+for (let i = 0; i < ourTotalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('carousel-dot');
+    if (i === ourCurrentSlide) {
+        dot.classList.add('active');
+    }
+    dot.addEventListener('click', () => {
+        showOurSlide(i);
+    });
+    carouselDotsContainer.appendChild(dot);
+}
+
+// Функция для обновления активной точки
+function updateDots() {
+    const dots = document.querySelectorAll('.carousel-dot');
+    dots.forEach((dot, index) => {
+        if (index === ourCurrentSlide) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+// Обновляем точки при переключении слайдов
+function showOurSlide(n) {
+    const slides = document.querySelectorAll('.stages__mobile');
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[n].classList.add('active');
+    ourCurrentSlide = n;
+    updateOurButtons();
+    updateDots(); // Обновляем точки
+}
