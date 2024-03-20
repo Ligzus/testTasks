@@ -568,6 +568,10 @@ svg circle {
         padding-right: calc(50% - 168px);
     }
 
+    .center__1 {
+        padding-right: calc(50% - 168px);
+    }
+
     h1 {
         font-size: 36px;
         line-height: 111%;
