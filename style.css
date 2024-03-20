@@ -439,7 +439,7 @@ p {
 #prevBtn,
 #nextBtn {
     position: absolute;
-    top: 30%;
+    top: 18%;
     cursor: pointer;
     border: none;
     background:none;
@@ -474,7 +474,7 @@ svg circle {
     font-weight: 400;
     line-height: 120%;
     right: 65px;
-    top: 30px;
+    top: 40%;
 }
 
 .disabled {

@@ -1,9 +1,8 @@
-// Карусель "Участники..."
+// Мобильная карусель "Участники..."
 const carousel = document.querySelector('.carousel');
 const prevButton = document.getElementById('prevBtn');
 const nextButton = document.getElementById('nextBtn');
 const slides = document.querySelectorAll('.slide');
-const slideWidth = slides[0].offsetWidth * 3;
 const totalSlides = slides.length;
 let currentIndex = 0;
 
@@ -13,43 +12,36 @@ updateCounter();
 updateButtons();
 
 nextButton.addEventListener('click', () => {
-  currentIndex = Math.min(currentIndex + 3, totalSlides - 3);
-  updateCarousel();
+  if (currentIndex < totalSlides - 1) {
+    currentIndex++;
+    updateCarousel();
+  }
 });
 
 prevButton.addEventListener('click', () => {
-  currentIndex = Math.max(currentIndex - 3, 0);
-  updateCarousel();
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
 });
 
 function updateCarousel() {
-  const offset = -currentIndex * slideWidth / 3;
+  const offset = -currentIndex * slides[0].offsetWidth;
   carousel.style.transform = `translateX(${offset}px)`;
   updateCounter();
   updateButtons();
-};
+}
 
 function updateButtons() {
-  if (currentIndex === 0) {
-    prevButton.classList.add('disabled');
-  } else {
-    prevButton.classList.remove('disabled');
-  };
-
-  if (currentIndex >= totalSlides - 3) {
-    nextButton.classList.add('disabled');
-  } else {
-    nextButton.classList.remove('disabled');
-  };
-};
+  prevButton.disabled = currentIndex === 0;
+  nextButton.disabled = currentIndex === totalSlides - 1;
+}
 
 function updateCounter() {
-  const startSlide = currentIndex === 0 ? 3 : currentIndex + 3;
-  const endSlide = Math.min(currentIndex + 3, totalSlides);
-  counter.textContent = `${startSlide}/${totalSlides}`;
-};
+  counter.textContent = `${currentIndex + 1}/${totalSlides}`;
+}
 
-// Мобильная карусель "Этапы...":
+// Еще мобилльные карусели "Этапы...":
 
 let ourCurrentSlide = 0; // Используем индексацию с 0
 const ourTotalSlides = document.querySelectorAll('.stages__mobile').length; // Получаем общее количество слайдов
